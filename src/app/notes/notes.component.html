@@ -1,0 +1,14 @@
+<div>
+  <div *ngFor="let n of notes$ | async" class="card box">
+    <div class="card-header">
+      Skugal
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>
+          {{ n.data }}
+        </p>
+      </blockquote>
+    </div>
+  </div>
+</div>

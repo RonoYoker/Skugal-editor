@@ -1,0 +1,26 @@
+<div class="jumbotron text-center">
+  <h1>Skugal Text Editor</h1>
+</div>
+
+<div class="container">
+  <form #formdata="ngForm" (ngSubmit)="onClickSubmit(formdata)">
+    <div class="form-group">
+      <label for="text">Description:</label>
+      <angular-editor
+        ngModel
+        name="editor"
+        [placeholder]="'Enter text here...'"
+      ></angular-editor>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="leftTop">
+  <a style="cursor: pointer;" (click)="exportexcel()">
+    <button class="btn btn-primary box">Export Excel</button>
+  </a>
+  <a style="cursor: pointer;" (click)="exportpdf()">
+    <button class="btn btn-primary box">Export PDF</button>
+  </a>
+</div>
